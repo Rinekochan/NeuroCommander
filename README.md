@@ -4,7 +4,7 @@
 
 ## Overview
 
-**NeuroWar Commander** is a real-time tactical simulation built to explore and compare two prominent AI paradigms—**Behaviour Tree (BT)** and **Belief-Desire-Intention (BDI)**—within a constrained RTS environment. Developed in C# using the Godot engine, the game pits two AI-controlled squads against each other under fog-of-war, unit FSMs, and camp control mechanics. The goal is to assess how each AI architecture performs tactically in dynamic and partially observable settings.
+**NeuroWar Commander** is a real-time tactical simulation built to explore and compare two prominent AI paradigms: **Behaviour Tree (BT)** and **Belief-Desire-Intention (BDI)**. Developed in C# using the Godot engine, the game pits two AI-controlled squads against each other under fog-of-war, unit FSMs, and camp control mechanics. The goal is to assess how each AI architecture performs tactically in dynamic and partially observable settings.
 
 ## Key Features
 
@@ -46,7 +46,3 @@ Uses freely licensed art assets from OpenGameArt contributors:
 
 * Colony Sim Environment by Buch
 * Armored Soldiers by Ragewortt
-
----
-
-Let me know if you'd like this README to include badges, setup instructions, or installation notes.
