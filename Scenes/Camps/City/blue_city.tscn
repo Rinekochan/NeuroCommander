@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cer7hhb67eicn"]
+
+[ext_resource type="PackedScene" uid="uid://cpxlkq3xkkfj1" path="res://Scenes/Camps/camp_base.tscn" id="1_kmavb"]
+[ext_resource type="Script" uid="uid://dx1tf5kyqises" path="res://Scripts/Camps/City.cs" id="2_hnvtk"]
+[ext_resource type="Texture2D" uid="uid://dkyjyhpnvedji" path="res://Assets/Cities/Blue City.png" id="3_h8t3n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnvtk"]
+resource_local_to_scene = true
+size = Vector2(86, 57)
+
+[node name="BlueCity1" instance=ExtResource("1_kmavb")]
+script = ExtResource("2_hnvtk")
+
+[node name="SpriteBase" parent="." index="0"]
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("3_h8t3n")
+
+[node name="CollisionShapeBase" parent="." index="1"]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_hnvtk")

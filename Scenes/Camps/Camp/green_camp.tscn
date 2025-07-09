@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp7v47ndlenty"]
+
+[ext_resource type="PackedScene" uid="uid://cpxlkq3xkkfj1" path="res://Scenes/Camps/camp_base.tscn" id="1_8nj2a"]
+[ext_resource type="Texture2D" uid="uid://bq04wf4hqdkkb" path="res://Assets/Camps/Green Camp 1.png" id="2_ecavg"]
+[ext_resource type="Script" uid="uid://bpgowc0h2j15a" path="res://Scripts/Camps/Camp.cs" id="2_vg1yu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iddpc"]
+resource_local_to_scene = true
+size = Vector2(64, 66)
+
+[node name="GreenCamp" instance=ExtResource("1_8nj2a")]
+script = ExtResource("2_vg1yu")
+
+[node name="SpriteBase" parent="." index="0"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_ecavg")
+
+[node name="CollisionShapeBase" parent="." index="1"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_iddpc")

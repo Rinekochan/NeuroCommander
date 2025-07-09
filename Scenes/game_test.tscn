@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6ji6evumtok"]
+
+[ext_resource type="PackedScene" uid="uid://1qxqg3xdh7th" path="res://Scenes/World/world_test.tscn" id="1_nfvl4"]
+[ext_resource type="PackedScene" uid="uid://drmyvdusadaf1" path="res://Scenes/UI/UI.tscn" id="2_h07e4"]
+[ext_resource type="Script" uid="uid://db6jjyc3j20ie" path="res://Scripts/UI/UI.cs" id="3_npqdh"]
+
+[node name="Game" type="Node2D"]
+
+[node name="World" parent="." instance=ExtResource("1_nfvl4")]
+
+[node name="UI" parent="." instance=ExtResource("2_h07e4")]
+follow_viewport_enabled = false
+script = ExtResource("3_npqdh")
+World = NodePath("../World")

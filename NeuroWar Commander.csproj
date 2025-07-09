@@ -1,0 +1,12 @@
+<Project Sdk="Godot.NET.Sdk/4.4.1">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <RootNamespace>NeuroWarCommander</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Scenes\Team\" />
+    <Folder Include="Scripts\UI\" />
+    <Folder Include="Scripts\Utils\TeamOverlay\" />
+  </ItemGroup>
+</Project>

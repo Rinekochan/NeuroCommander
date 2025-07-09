@@ -1,0 +1,14 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://crufx0woryrum"
+
+[deps]
+
+source_file="res://MatchLogs/Map1/match_Map1_20250607_060617_#5.csv"
+
+[params]
+
+compress=true
+delimiter=0

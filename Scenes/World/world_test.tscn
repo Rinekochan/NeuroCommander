@@ -1,0 +1,139 @@
+[gd_scene load_steps=19 format=3 uid="uid://1qxqg3xdh7th"]
+
+[ext_resource type="Script" uid="uid://bosl80rhe2wwh" path="res://Scripts/World.cs" id="1_7staa"]
+[ext_resource type="PackedScene" uid="uid://bhlmt4pjwxjrm" path="res://Scenes/Maps/Map01.tscn" id="2_fcotr"]
+[ext_resource type="Script" uid="uid://po73v5halj62" path="res://Scripts/Utils/Camera.cs" id="3_l1hd3"]
+[ext_resource type="Script" uid="uid://w3fc3h8qw46u" path="res://Scripts/Team/Team.cs" id="4_7ubof"]
+[ext_resource type="Script" uid="uid://b77x7v8opqp7u" path="res://Scripts/Test/AgentTestController.cs" id="5_6paci"]
+[ext_resource type="Script" uid="uid://d4cg4wq6udr7x" path="res://Scripts/Utils/GlobalOverlay/GlobalMapOverlay.cs" id="5_7staa"]
+[ext_resource type="Script" uid="uid://dl4vm5hx7uv2v" path="res://Scripts/Utils/GlobalOverlay/InfluenceOverlay.cs" id="5_adcqc"]
+[ext_resource type="Script" uid="uid://ce61l6mao1l6f" path="res://Scripts/Utils/GlobalMap/GlobalInfluenceMap.cs" id="5_l1hd3"]
+[ext_resource type="PackedScene" uid="uid://tsnpx3jotexq" path="res://Scenes/Units/Sniper/blue_sniper.tscn" id="6_owiee"]
+[ext_resource type="Script" uid="uid://c465tgvkkdco0" path="res://Scripts/Team/Blackboard/Blackboard.cs" id="7_vgy1r"]
+[ext_resource type="Script" uid="uid://cx0ycb6moedmv" path="res://Scripts/Team/Blackboard/VisionMap.cs" id="8_wuj3x"]
+[ext_resource type="Script" uid="uid://cddums6wnsb20" path="res://Scripts/Team/Blackboard/LocationMap.cs" id="9_omjp5"]
+[ext_resource type="Script" uid="uid://duj1w6scn4c51" path="res://Scripts/Team/Blackboard/TerrainMap.cs" id="10_yn3bx"]
+[ext_resource type="Script" uid="uid://c122f28fs1kba" path="res://Scripts/Team/Blackboard/InfluenceMap.cs" id="11_ch0oy"]
+[ext_resource type="Script" uid="uid://d216ha7uwp35a" path="res://Scripts/Utils/TeamOverlay/TacticalMapOverlay.cs" id="13_fxlwc"]
+[ext_resource type="Script" uid="uid://ddiuhknmmr32v" path="res://Scripts/Utils/TeamOverlay/TerrainOverlay.cs" id="14_52u43"]
+[ext_resource type="Script" uid="uid://bg2q6hva0sh5u" path="res://Scripts/Utils/TeamOverlay/VisionOverlay.cs" id="15_h42hy"]
+[ext_resource type="Script" uid="uid://dmr2uniex7un5" path="res://Scripts/Utils/TeamOverlay/LocationOverlay.cs" id="16_fdshi"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_7staa")
+
+[node name="Map" parent="." instance=ExtResource("2_fcotr")]
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(358, 498)
+script = ExtResource("3_l1hd3")
+
+[node name="TeamA" type="Node2D" parent="."]
+position = Vector2(872, 849)
+script = ExtResource("4_7ubof")
+RiflemanCount = 2
+SniperCount = 1
+TankerCount = 1
+ScoutCount = 2
+SiegeMachineCount = 1
+
+[node name="UserController" type="Node2D" parent="TeamA"]
+script = ExtResource("5_6paci")
+MapPath = NodePath("../../Map")
+AgentPath = NodePath("../Units/BlueSniper")
+
+[node name="Units" type="Node" parent="TeamA"]
+
+[node name="BlueSniper" parent="TeamA/Units" instance=ExtResource("6_owiee")]
+position = Vector2(691, 970)
+TeamId = 1
+
+[node name="Blackboard" type="Node" parent="TeamA"]
+script = ExtResource("7_vgy1r")
+
+[node name="VisionMap" type="Node" parent="TeamA/Blackboard"]
+script = ExtResource("8_wuj3x")
+
+[node name="LocationMap" type="Node" parent="TeamA/Blackboard"]
+script = ExtResource("9_omjp5")
+
+[node name="TerrainMap" type="Node" parent="TeamA/Blackboard"]
+script = ExtResource("10_yn3bx")
+
+[node name="InfluenceMap" type="Node" parent="TeamA/Blackboard"]
+script = ExtResource("11_ch0oy")
+
+[node name="TacticalMapOverlay" type="Node2D" parent="TeamA"]
+script = ExtResource("13_fxlwc")
+
+[node name="EnvironmentOverlay" type="Node2D" parent="TeamA/TacticalMapOverlay"]
+
+[node name="TerrainOverlay" type="Node2D" parent="TeamA/TacticalMapOverlay/EnvironmentOverlay"]
+script = ExtResource("14_52u43")
+
+[node name="VisionOverlay" type="Node2D" parent="TeamA/TacticalMapOverlay/EnvironmentOverlay"]
+script = ExtResource("15_h42hy")
+
+[node name="LocationOverlay" type="Node2D" parent="TeamA/TacticalMapOverlay/EnvironmentOverlay"]
+script = ExtResource("16_fdshi")
+
+[node name="InfluenceOverlay" type="Node2D" parent="TeamA/TacticalMapOverlay"]
+script = ExtResource("5_adcqc")
+InfluenceMap = NodePath("../../Blackboard/InfluenceMap")
+
+[node name="TeamB" type="Node2D" parent="."]
+position = Vector2(-870, -784)
+script = ExtResource("4_7ubof")
+TeamId = 2
+RiflemanCount = 2
+SniperCount = 1
+TankerCount = 1
+ScoutCount = 2
+SiegeMachineCount = 1
+
+[node name="Units" type="Node" parent="TeamB"]
+
+[node name="Blackboard" type="Node" parent="TeamB"]
+script = ExtResource("7_vgy1r")
+
+[node name="VisionMap" type="Node" parent="TeamB/Blackboard"]
+script = ExtResource("8_wuj3x")
+
+[node name="LocationMap" type="Node" parent="TeamB/Blackboard"]
+script = ExtResource("9_omjp5")
+
+[node name="TerrainMap" type="Node" parent="TeamB/Blackboard"]
+script = ExtResource("10_yn3bx")
+
+[node name="InfluenceMap" type="Node" parent="TeamB/Blackboard"]
+script = ExtResource("11_ch0oy")
+
+[node name="TacticalMapOverlay" type="Node2D" parent="TeamB"]
+script = ExtResource("13_fxlwc")
+
+[node name="EnvironmentOverlay" type="Node2D" parent="TeamB/TacticalMapOverlay"]
+
+[node name="TerrainOverlay" type="Node2D" parent="TeamB/TacticalMapOverlay/EnvironmentOverlay"]
+script = ExtResource("14_52u43")
+
+[node name="VisionOverlay" type="Node2D" parent="TeamB/TacticalMapOverlay/EnvironmentOverlay"]
+script = ExtResource("15_h42hy")
+
+[node name="LocationOverlay" type="Node2D" parent="TeamB/TacticalMapOverlay/EnvironmentOverlay"]
+script = ExtResource("16_fdshi")
+
+[node name="InfluenceOverlay" type="Node2D" parent="TeamB/TacticalMapOverlay"]
+script = ExtResource("5_adcqc")
+InfluenceMap = NodePath("../../Blackboard/InfluenceMap")
+
+[node name="GlobalMapOverlay" type="Node2D" parent="."]
+script = ExtResource("5_7staa")
+
+[node name="GlobalInfluenceOverlay" type="Node2D" parent="GlobalMapOverlay"]
+script = ExtResource("5_adcqc")
+InfluenceMap = NodePath("../../GlobalTacticalMap/GlobalInfluenceMap")
+
+[node name="GlobalTacticalMap" type="Node2D" parent="."]
+
+[node name="GlobalInfluenceMap" type="Node2D" parent="GlobalTacticalMap"]
+script = ExtResource("5_l1hd3")

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgh8ldj8p5q4e"]
+
+[ext_resource type="PackedScene" uid="uid://d0ineya728htc" path="res://Scenes/Units/Tanker/blue_tanker.tscn" id="1_xwwvo"]
+[ext_resource type="Texture2D" uid="uid://d057pjl6qovu" path="res://Assets/Units/Tanker/RedTanker.png" id="2_tfmq4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vkk3w"]
+resource_local_to_scene = true
+radius = 150.0
+
+[node name="RedTanker" instance=ExtResource("1_xwwvo")]
+
+[node name="UnitSprite" parent="." index="0"]
+texture = ExtResource("2_tfmq4")
+
+[node name="UnitCollisionShape" parent="." index="1"]
+position = Vector2(-5, 10)
+
+[node name="FOVConeCollision" parent="FOVCone" index="0"]
+position = Vector2(-6, 2)
+
+[node name="VisionCircleCollision" parent="VisionCircle" index="0"]
+position = Vector2(-8, 3)
+shape = SubResource("CircleShape2D_vkk3w")
+
+[node name="Marker" parent="." index="8"]
+position = Vector2(33, -42)

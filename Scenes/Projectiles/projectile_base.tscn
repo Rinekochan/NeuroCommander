@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://difmq5sy6socu"]
+
+[ext_resource type="Script" uid="uid://cdxassr2w03hi" path="res://Scripts/Units/Base/AttackableBase/ProjectileBase.cs" id="1_qnwso"]
+[ext_resource type="Texture2D" uid="uid://dsvh3j781c1tj" path="res://Assets/Units/Bullet/RifleBullet.png" id="1_r4f3n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qnwso"]
+resource_local_to_scene = true
+radius = 5.0
+height = 14.0
+
+[node name="ProjectileBase" type="Area2D"]
+collision_layer = 8
+collision_mask = 6
+script = ExtResource("1_qnwso")
+
+[node name="Bullet" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_r4f3n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -9)
+shape = SubResource("CapsuleShape2D_qnwso")

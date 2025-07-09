@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://vbykiko1yly4"]
+
+[ext_resource type="Texture2D" uid="uid://c6chim3eqhadq" path="res://Assets/Obstacles/Wall/Green Wall 2.png" id="1_0ske0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcs5q"]
+size = Vector2(16, 20)
+
+[node name="GreenWall2" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 10
+
+[node name="GreenWall2" type="Sprite2D" parent="."]
+texture = ExtResource("1_0ske0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bcs5q")

@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://bhp55xq5ysotv"]
+
+[ext_resource type="Texture2D" uid="uid://coshaj4wscpw" path="res://Assets/Units/Scout/BlueScout.png" id="1_22ugh"]
+[ext_resource type="Script" uid="uid://bhp8urnrxmfeg" path="res://Scripts/Units/Base/UnitBase.cs" id="1_igbku"]
+[ext_resource type="Script" uid="uid://2yaxg5f2hool" path="res://Scripts/Units/Base/PerceptionSystem.cs" id="3_fnrtv"]
+[ext_resource type="Script" uid="uid://c8w6hju236agw" path="res://Scripts/Units/Base/UnitFSM.cs" id="3_hw2f8"]
+[ext_resource type="Script" uid="uid://c5cy6d08ouybn" path="res://Scripts/Units/Base/SteeringSystem.cs" id="4_q6505"]
+[ext_resource type="Script" uid="uid://rvk0opuvotcc" path="res://Scripts/Units/Base/PathfindingSystem.cs" id="5_bdvdn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_22ugh"]
+resource_local_to_scene = true
+radius = 65.0692
+
+[node name="UnitBase" type="CharacterBody2D"]
+scale = Vector2(0.25, 0.25)
+collision_layer = 2
+collision_mask = 15
+script = ExtResource("1_igbku")
+CurrentHealth = 100.0
+
+[node name="UnitSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_22ugh")
+
+[node name="UnitCollisionShape" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-28, -24, -15, -7, 14, -7, 29, -26, 38, -1, 24, 20, -26, 20, -40, -1)
+
+[node name="FOVCone" type="Area2D" parent="." groups=["fov_cone"]]
+collision_layer = 2
+collision_mask = 15
+script = ExtResource("3_fnrtv")
+UnitPath = NodePath("..")
+
+[node name="FOVConeCollision" type="CollisionPolygon2D" parent="FOVCone"]
+polygon = PackedVector2Array(-9, -7, -42, -53, -33, -58, -25, -61, -18, -62, 0, -62, 18, -62, 22, -61, 28, -58, 33, -53, 8, -7)
+
+[node name="VisionCircle" type="Area2D" parent="." groups=["vision_circle"]]
+collision_layer = 2
+collision_mask = 15
+script = ExtResource("3_fnrtv")
+UnitPath = NodePath("..")
+
+[node name="VisionCircleCollision" type="CollisionShape2D" parent="VisionCircle"]
+shape = SubResource("CircleShape2D_22ugh")
+
+[node name="Steering" type="Node2D" parent="."]
+script = ExtResource("4_q6505")
+
+[node name="Pathfinding" type="Node2D" parent="."]
+script = ExtResource("5_bdvdn")
+
+[node name="UnitFSM" type="Node2D" parent="."]
+script = ExtResource("3_hw2f8")

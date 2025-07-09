@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://hen3skc5gi0x"]
+
+[ext_resource type="Script" uid="uid://d1f8eifcn5s24" path="res://Scripts/Game.cs" id="1_3dryh"]
+[ext_resource type="PackedScene" uid="uid://ole87bkvj8oa" path="res://Scenes/World/world.tscn" id="1_ebmjs"]
+[ext_resource type="PackedScene" uid="uid://drmyvdusadaf1" path="res://Scenes/UI/UI.tscn" id="2_qxrlw"]
+[ext_resource type="Script" uid="uid://db6jjyc3j20ie" path="res://Scripts/UI/UI.cs" id="3_wrm1d"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_3dryh")
+MatchTimeLimit = 1200.0
+
+[node name="World" parent="." instance=ExtResource("1_ebmjs")]
+metadata/_edit_lock_ = true
+
+[node name="UI" parent="." instance=ExtResource("2_qxrlw")]
+follow_viewport_enabled = false
+script = ExtResource("3_wrm1d")
+World = NodePath("")

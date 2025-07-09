@@ -1,0 +1,14 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c2anl2xcnqhqc"
+
+[deps]
+
+source_file="res://MatchLogs/Map2/match_Map2_20250607_220126_#4.csv"
+
+[params]
+
+compress=true
+delimiter=0

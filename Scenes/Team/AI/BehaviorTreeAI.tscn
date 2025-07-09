@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqo0hw411ssjw"]
+
+[ext_resource type="Script" uid="uid://1u7qmy4jbni0" path="res://Scripts/AIs/BehaviorTree/BehaviorTreeAI.cs" id="1_iynj0"]
+
+[node name="BehaviorTreeAI" type="Node2D"]
+script = ExtResource("1_iynj0")

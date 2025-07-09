@@ -1,0 +1,50 @@
+Match #5,,,,,,,,
+Map: Map1,,,,,,,,
+Start Time: 7/06/2025 6:06:17 AM,,,,,,,,
+---,,,,,,,,
+Team A using BDI,,,,,,,,
+Team B using BehaviorTree,,,,,,,,
+---,,,,,,,,
+Match ended after 227.2 seconds,,,,,,,,
+Winner: TeamA - TeamB has no commanders left.,,,,,,,,
+,,,,,,,,
+--- Final Match Metrics ---,,,,,,,,
+Winner: TeamA.,,,,,,,,
+Match Duration: 227.2 seconds,,,,,,,,
+Team A Final Unit Count: 10,,,,,,,,
+Team B Final Unit Count: 13,,,,,,,,
+Team A Final Health %: 100.0,,,,,,,,
+Team B Final Health %: 98.5,,,,,,,,
+Team A Camp Count: 8,,,,,,,,
+Team B Camp Count: 3,,,,,,,,
+Team A Combat Encounters: 107,,,,,,,,
+Team B Combat Encounters: 65,,,,,,,,
+Team A Scouted Cells: 4181 cells,,,,,,,,
+Team B Scouted Cells: 5139 cells,,,,,,,,
+Team A Avg Reaction Time: 0.27 seconds,,,,,,,,
+Team B Avg Reaction Time: 0.21 seconds,,,,,,,,
+,,,,,,,,
+--- Time Series Data ---,,,,,,,,
+Time,TeamA_Units,TeamB_Units,TeamA_Health%,TeamB_Health%,TeamA_CombatEncounters,TeamB_CombatEncounters,TeamA_AvgReactionTime,TeamB_AvgReactionTime
+10,15,15,100,100,0,0,N/A,N/A
+20.1,15,15,100,100,0,3,N/A,N/A
+30.1,15,15,100,100,0,8,N/A,N/A
+40.1,15,15,100,100,5,8,N/A,N/A
+50.1,15,15,100,100,8,8,N/A,N/A
+60.1,15,15,100,100,13,8,N/A,N/A
+70.1,15,15,100,100,13,8,N/A,N/A
+80.1,15,15,100,100,17,14,N/A,N/A
+90.2,15,15,100,100,36,14,N/A,N/A
+100.2,15,15,100,100,46,14,N/A,N/A
+110.2,15,15,100,100,51,15,N/A,N/A
+120.2,15,15,100,100,57,37,N/A,0.47
+130.2,15,15,100,100,57,49,N/A,0.47
+140.3,15,15,100,100,67,49,N/A,0.47
+150.3,14,15,100,100,78,50,N/A,0.47
+160.3,14,15,100,100,82,50,N/A,0.47
+170.3,13,15,100,100,90,51,N/A,0.39
+180.3,12,15,94.9,100,90,61,N/A,0.22
+190.3,12,15,94.9,100,90,61,N/A,0.22
+200.4,12,15,94.9,100,101,61,0.32,0.22
+210.4,11,15,99.3,100,102,62,0.29,0.22
+220.4,11,15,94.2,96.2,103,64,0.29,0.23

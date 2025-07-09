@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://doxpl17q18cdi"]
+
+[ext_resource type="Texture2D" uid="uid://ckfq2hbsamqml" path="res://Assets/Obstacles/Wall/Blue Wall 2.png" id="1_eb4ia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdr24"]
+
+[node name="BlueWall2" type="StaticBody2D" groups=["obstacles"]]
+collision_layer = 4
+collision_mask = 10
+
+[node name="BlueWall2" type="Sprite2D" parent="."]
+texture = ExtResource("1_eb4ia")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fdr24")

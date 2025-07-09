@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3tmc8vy0pnk4"]
+
+[ext_resource type="PackedScene" uid="uid://dyh43f3kkn0hl" path="res://Scenes/Camps/Castle/blue_castle.tscn" id="1_nwop6"]
+[ext_resource type="Texture2D" uid="uid://cw50r66rmilbe" path="res://Assets/Castles/Gray Castle.png" id="2_40njt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h6uj7"]
+resource_local_to_scene = true
+size = Vector2(129.5, 114)
+
+[node name="GrayCastle" instance=ExtResource("1_nwop6")]
+
+[node name="SpriteBase" parent="." index="0"]
+texture = ExtResource("2_40njt")
+
+[node name="CollisionShapeBase" parent="." index="1"]
+position = Vector2(-0.75, 6)
+shape = SubResource("RectangleShape2D_h6uj7")

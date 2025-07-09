@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dugm3334bt0pk"]
+
+[ext_resource type="PackedScene" uid="uid://b5ma4j3itwo3b" path="res://Scenes/Camps/Town/gray_town_1.tscn" id="1_ewu8q"]
+[ext_resource type="Texture2D" uid="uid://b4oyoxm60lr7x" path="res://Assets/Towns/Gray Town 2.png" id="2_s1fc3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1tus"]
+resource_local_to_scene = true
+size = Vector2(58, 58)
+
+[node name="GrayTown2" instance=ExtResource("1_ewu8q")]
+
+[node name="SpriteBase" parent="." index="0"]
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("2_s1fc3")
+
+[node name="CollisionShapeBase" parent="." index="1"]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_l1tus")

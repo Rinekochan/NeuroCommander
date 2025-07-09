@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxqm44kbhedks"]
+
+[ext_resource type="Script" uid="uid://dwsd1klrf0p60" path="res://Scripts/AIs/BDI/BDIControllerAI.cs" id="1_pcgyc"]
+
+[node name="BDIControllerAI" type="Node2D"]
+script = ExtResource("1_pcgyc")

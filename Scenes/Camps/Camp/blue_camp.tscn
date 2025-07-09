@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://lg607ycaxovc"]
+
+[ext_resource type="PackedScene" uid="uid://cpxlkq3xkkfj1" path="res://Scenes/Camps/camp_base.tscn" id="1_lu3xv"]
+[ext_resource type="Script" uid="uid://bpgowc0h2j15a" path="res://Scripts/Camps/Camp.cs" id="2_odpmx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbawy"]
+resource_local_to_scene = true
+size = Vector2(64, 62)
+
+[node name="BlueCamp" instance=ExtResource("1_lu3xv")]
+script = ExtResource("2_odpmx")
+
+[node name="SpriteBase" parent="." index="0"]
+scale = Vector2(2, 2)
+
+[node name="CollisionShapeBase" parent="." index="1"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_gbawy")

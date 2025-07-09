@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://t2j7pf8w27s4"]
+
+[ext_resource type="PackedScene" uid="uid://bhp55xq5ysotv" path="res://Scenes/Units/unit_base.tscn" id="1_g4e7x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nu4sh"]
+resource_local_to_scene = true
+radius = 300.0
+
+[node name="BlueScout" groups=["scouts"] instance=ExtResource("1_g4e7x")]
+
+[node name="FOVConeCollision" parent="FOVCone" index="0"]
+polygon = PackedVector2Array(-9, -7, -100, -164, -80, -180, -56, -188, -28, -192, 8, -196, 56, -188, 112, -160, 8, -7)
+
+[node name="VisionCircleCollision" parent="VisionCircle" index="0"]
+shape = SubResource("CircleShape2D_nu4sh")
+
+[node name="Steering" parent="." index="4"]
+UnitPath = NodePath("..")

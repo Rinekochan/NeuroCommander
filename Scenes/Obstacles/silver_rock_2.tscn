@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjgd52y8rken2"]
+
+[ext_resource type="Texture2D" uid="uid://82lvtukmya7q" path="res://Assets/Obstacles/Rocks/SilverRock2.png" id="1_o5ull"]
+
+[node name="SilverRock2" type="StaticBody2D" groups=["obstacles"]]
+collision_layer = 4
+collision_mask = 10
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-9, -1, -1, -10, 9, -5, 6, 8, -2, 9, -9, 0)
+
+[node name="SilverRock2" type="Sprite2D" parent="."]
+texture = ExtResource("1_o5ull")

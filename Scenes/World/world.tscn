@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://ole87bkvj8oa"]
+
+[ext_resource type="Script" uid="uid://bosl80rhe2wwh" path="res://Scripts/World.cs" id="1_7staa"]
+[ext_resource type="PackedScene" uid="uid://bhlmt4pjwxjrm" path="res://Scenes/Maps/Map01.tscn" id="2_fcotr"]
+[ext_resource type="Script" uid="uid://po73v5halj62" path="res://Scripts/Utils/Camera.cs" id="3_l1hd3"]
+[ext_resource type="PackedScene" uid="uid://cpirghqhg2qlh" path="res://Scenes/Team/team.tscn" id="4_7staa"]
+[ext_resource type="Script" uid="uid://d4cg4wq6udr7x" path="res://Scripts/Utils/GlobalOverlay/GlobalMapOverlay.cs" id="5_7staa"]
+[ext_resource type="Script" uid="uid://dl4vm5hx7uv2v" path="res://Scripts/Utils/GlobalOverlay/InfluenceOverlay.cs" id="5_adcqc"]
+[ext_resource type="Script" uid="uid://ce61l6mao1l6f" path="res://Scripts/Utils/GlobalMap/GlobalInfluenceMap.cs" id="5_l1hd3"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_7staa")
+
+[node name="Map" parent="." instance=ExtResource("2_fcotr")]
+metadata/_edit_lock_ = true
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(358, 498)
+script = ExtResource("3_l1hd3")
+metadata/_edit_lock_ = true
+
+[node name="TeamA" parent="." instance=ExtResource("4_7staa")]
+position = Vector2(799, 870)
+RiflemanCount = 3
+SniperCount = 2
+TankerCount = 2
+ScoutCount = 5
+SiegeMachineCount = 2
+ChosenAI = 1
+
+[node name="TeamB" parent="." instance=ExtResource("4_7staa")]
+position = Vector2(-858, -938)
+TeamId = 2
+RiflemanCount = 3
+SniperCount = 2
+TankerCount = 2
+ScoutCount = 5
+SiegeMachineCount = 2
+
+[node name="GlobalMapOverlay" type="Node2D" parent="."]
+script = ExtResource("5_7staa")
+metadata/_edit_lock_ = true
+
+[node name="GlobalInfluenceOverlay" type="Node2D" parent="GlobalMapOverlay"]
+script = ExtResource("5_adcqc")
+InfluenceMap = NodePath("../../GlobalTacticalMap/GlobalInfluenceMap")
+
+[node name="GlobalTacticalMap" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="GlobalInfluenceMap" type="Node2D" parent="GlobalTacticalMap"]
+script = ExtResource("5_l1hd3")

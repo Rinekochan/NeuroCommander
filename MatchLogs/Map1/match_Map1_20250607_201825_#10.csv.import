@@ -1,0 +1,14 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cpmhfc146cr4s"
+
+[deps]
+
+source_file="res://MatchLogs/Map1/match_Map1_20250607_201825_#10.csv"
+
+[params]
+
+compress=true
+delimiter=0

@@ -1,0 +1,51 @@
+[gd_scene load_steps=12 format=3 uid="uid://cpirghqhg2qlh"]
+
+[ext_resource type="Script" uid="uid://w3fc3h8qw46u" path="res://Scripts/Team/Team.cs" id="1_nokoh"]
+[ext_resource type="Script" uid="uid://c465tgvkkdco0" path="res://Scripts/Team/Blackboard/Blackboard.cs" id="2_uyulk"]
+[ext_resource type="Script" uid="uid://cx0ycb6moedmv" path="res://Scripts/Team/Blackboard/VisionMap.cs" id="3_ywjmj"]
+[ext_resource type="Script" uid="uid://cddums6wnsb20" path="res://Scripts/Team/Blackboard/LocationMap.cs" id="4_ywjmj"]
+[ext_resource type="Script" uid="uid://duj1w6scn4c51" path="res://Scripts/Team/Blackboard/TerrainMap.cs" id="5_ib3es"]
+[ext_resource type="Script" uid="uid://c122f28fs1kba" path="res://Scripts/Team/Blackboard/InfluenceMap.cs" id="6_gjvmh"]
+[ext_resource type="Script" uid="uid://d216ha7uwp35a" path="res://Scripts/Utils/TeamOverlay/TacticalMapOverlay.cs" id="7_g8nyf"]
+[ext_resource type="Script" uid="uid://ddiuhknmmr32v" path="res://Scripts/Utils/TeamOverlay/TerrainOverlay.cs" id="11_ywjmj"]
+[ext_resource type="Script" uid="uid://bg2q6hva0sh5u" path="res://Scripts/Utils/TeamOverlay/VisionOverlay.cs" id="18_ix1vj"]
+[ext_resource type="Script" uid="uid://dmr2uniex7un5" path="res://Scripts/Utils/TeamOverlay/LocationOverlay.cs" id="19_nokoh"]
+[ext_resource type="Script" uid="uid://dl4vm5hx7uv2v" path="res://Scripts/Utils/GlobalOverlay/InfluenceOverlay.cs" id="21_ix1vj"]
+
+[node name="Team" type="Node2D"]
+script = ExtResource("1_nokoh")
+
+[node name="Units" type="Node" parent="."]
+
+[node name="Blackboard" type="Node" parent="."]
+script = ExtResource("2_uyulk")
+
+[node name="VisionMap" type="Node" parent="Blackboard"]
+script = ExtResource("3_ywjmj")
+
+[node name="LocationMap" type="Node" parent="Blackboard"]
+script = ExtResource("4_ywjmj")
+
+[node name="TerrainMap" type="Node" parent="Blackboard"]
+script = ExtResource("5_ib3es")
+
+[node name="InfluenceMap" type="Node" parent="Blackboard"]
+script = ExtResource("6_gjvmh")
+
+[node name="TacticalMapOverlay" type="Node2D" parent="."]
+script = ExtResource("7_g8nyf")
+
+[node name="EnvironmentOverlay" type="Node2D" parent="TacticalMapOverlay"]
+
+[node name="TerrainOverlay" type="Node2D" parent="TacticalMapOverlay/EnvironmentOverlay"]
+script = ExtResource("11_ywjmj")
+
+[node name="VisionOverlay" type="Node2D" parent="TacticalMapOverlay/EnvironmentOverlay"]
+script = ExtResource("18_ix1vj")
+
+[node name="LocationOverlay" type="Node2D" parent="TacticalMapOverlay/EnvironmentOverlay"]
+script = ExtResource("19_nokoh")
+
+[node name="InfluenceOverlay" type="Node2D" parent="TacticalMapOverlay"]
+script = ExtResource("21_ix1vj")
+InfluenceMap = NodePath("../../Blackboard/InfluenceMap")

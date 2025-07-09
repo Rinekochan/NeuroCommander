@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqdqooabxonv6"]
+
+[ext_resource type="PackedScene" uid="uid://bhp55xq5ysotv" path="res://Scenes/Units/unit_base.tscn" id="1_7w2w6"]
+[ext_resource type="Script" uid="uid://lvejr6258fnj" path="res://Scripts/Units/Base/AttackableBase/AttackableUnitBase.cs" id="2_m6jfy"]
+[ext_resource type="Texture2D" uid="uid://ctends8m4cbue" path="res://Assets/Units/Rifleman/BlueRifleman.png" id="2_xkhco"]
+[ext_resource type="Script" uid="uid://cskl5ero4pf35" path="res://Scripts/Units/Base/AttackableBase/WeaponBase.cs" id="3_gjoou"]
+[ext_resource type="Script" uid="uid://cqyud23dsds41" path="res://Scripts/Units/Base/AttackableBase/AttackableUnitFSM.cs" id="4_0luti"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d1dmh"]
+resource_local_to_scene = true
+radius = 65.0692
+
+[node name="AttackableUnitBase" instance=ExtResource("1_7w2w6")]
+script = ExtResource("2_m6jfy")
+WeaponPath = null
+MinAttackRange = 0.0
+
+[node name="UnitSprite" parent="." index="0"]
+texture = ExtResource("2_xkhco")
+
+[node name="UnitCollisionShape" parent="." index="1"]
+position = Vector2(0, 10)
+polygon = PackedVector2Array(-29, -33, -15, -12, 14, -12, 30, -31, 42, -4, 24, 20, -26, 20, -42, -2)
+
+[node name="VisionCircleCollision" parent="VisionCircle" index="0"]
+shape = SubResource("CircleShape2D_d1dmh")
+
+[node name="UnitFSM" parent="." index="6"]
+script = ExtResource("4_0luti")
+
+[node name="Weapon" type="Node2D" parent="." index="7"]
+script = ExtResource("3_gjoou")
+
+[node name="Marker" type="Marker2D" parent="." index="8"]
+position = Vector2(-29, -37)
+gizmo_extents = 100.0

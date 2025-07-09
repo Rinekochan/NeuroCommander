@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctn0pp1xa5fdu"]
+
+[ext_resource type="PackedScene" uid="uid://bhp55xq5ysotv" path="res://Scenes/Units/unit_base.tscn" id="1_suf0f"]
+[ext_resource type="Texture2D" uid="uid://bejctivmhuk48" path="res://Assets/Units/Commander/BlueCommander.png" id="2_ugjmh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ueeec"]
+resource_local_to_scene = true
+radius = 200.0
+
+[node name="BlueCommander" groups=["commanders"] instance=ExtResource("1_suf0f")]
+
+[node name="UnitSprite" parent="." index="0"]
+texture = ExtResource("2_ugjmh")
+
+[node name="UnitCollisionShape" parent="." index="1"]
+polygon = PackedVector2Array(-29, -27, -15, -23, 13, -23, 29, -26, 43, -26, 44, 18, 12, 29, -12, 28, -43, 18, -42, -27)
+
+[node name="FOVConeCollision" parent="FOVCone" index="0"]
+position = Vector2(0, -5)
+polygon = PackedVector2Array(-9, -7, -72, -127, -52, -134, -32, -141, -1, -145, 24, -141, 46, -137, 64, -128, 8, -7)
+
+[node name="VisionCircleCollision" parent="VisionCircle" index="0"]
+shape = SubResource("CircleShape2D_ueeec")
+
+[node name="Steering" parent="." index="4"]
+UnitPath = NodePath("..")
+MaxSpeed = 70.0

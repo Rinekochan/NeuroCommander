@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqqpory55vam4"]
+
+[ext_resource type="PackedScene" uid="uid://k4m3rbnorlad" path="res://Scenes/Units/Rifleman/blue_rifleman.tscn" id="1_her6n"]
+[ext_resource type="Texture2D" uid="uid://bb0bvk7ghcgym" path="res://Assets/Units/Rifleman/RedRifleman.png" id="2_qgetc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a5av6"]
+resource_local_to_scene = true
+radius = 200.0
+
+[node name="RedRifleman" instance=ExtResource("1_her6n")]
+
+[node name="UnitSprite" parent="." index="0"]
+texture = ExtResource("2_qgetc")
+
+[node name="FOVConeCollision" parent="FOVCone" index="0"]
+polygon = PackedVector2Array(-12, -1, -140, -200, -92, -232, -52, -244, -16, -248, 16, -248, 64, -240, 100, -228, 132, -208, 13, -2, 0, -5)
+
+[node name="VisionCircleCollision" parent="VisionCircle" index="0"]
+shape = SubResource("CircleShape2D_a5av6")
+
+[node name="Marker" parent="." index="8"]
+position = Vector2(-30, -37)

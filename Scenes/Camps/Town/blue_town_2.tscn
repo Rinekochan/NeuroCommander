@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://be8j4vvuxw8e0"]
+
+[ext_resource type="PackedScene" uid="uid://dei1uomt6n4db" path="res://Scenes/Camps/Town/blue_town_1.tscn" id="1_pug7c"]
+[ext_resource type="Texture2D" uid="uid://2l7jhhhl1isk" path="res://Assets/Towns/Blue Town 2.png" id="2_6jq4m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uefa2"]
+resource_local_to_scene = true
+size = Vector2(64, 64)
+
+[node name="BlueTown2" instance=ExtResource("1_pug7c")]
+
+[node name="SpriteBase" parent="." index="0"]
+texture = ExtResource("2_6jq4m")
+
+[node name="CollisionShapeBase" parent="." index="1"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_uefa2")

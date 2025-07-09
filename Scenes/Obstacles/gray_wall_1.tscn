@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsjoimw5d65l8"]
+
+[ext_resource type="Texture2D" uid="uid://ddo1njca80t40" path="res://Assets/Obstacles/Wall/Gray Wall 1.png" id="1_morbd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgb4j"]
+size = Vector2(16, 74)
+
+[node name="GrayWall1" type="StaticBody2D" groups=["obstacles"]]
+collision_layer = 4
+collision_mask = 10
+
+[node name="GrayWall1" type="Sprite2D" parent="."]
+texture = ExtResource("1_morbd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pgb4j")

@@ -1,0 +1,125 @@
+[gd_scene load_steps=9 format=3 uid="uid://drmyvdusadaf1"]
+
+[ext_resource type="FontFile" uid="uid://jhtu82gnqjj0" path="res://Assets/Fonts/rimouski sb.otf" id="1_s86y4"]
+[ext_resource type="Script" uid="uid://0tgbk46xf3bu" path="res://Scripts/UI/MapFocusModeLabel.cs" id="2_636u5"]
+[ext_resource type="Script" uid="uid://cv0mhmxa3jip2" path="res://Scripts/UI/MapOverlayModeLabel.cs" id="3_akgwn"]
+[ext_resource type="Script" uid="uid://dvvmdf1uu2osh" path="res://Scripts/UI/TeamAUnitsLabel.cs" id="4_b83rk"]
+[ext_resource type="Script" uid="uid://cxoauntx3cw" path="res://Scripts/UI/DebugToggleLabel.cs" id="4_w8wei"]
+[ext_resource type="Script" uid="uid://bkmvxfe2ql4i" path="res://Scripts/UI/TeamACampsLabel.cs" id="5_7tgkj"]
+[ext_resource type="Script" uid="uid://c12fm3dkufoht" path="res://Scripts/UI/TeamBUnitsLabel.cs" id="5_oqha6"]
+[ext_resource type="Script" uid="uid://b6xpxvrx4sy58" path="res://Scripts/UI/TeamBCampsLabel.cs" id="7_jevvu"]
+
+[node name="UI" type="CanvasLayer"]
+follow_viewport_enabled = true
+
+[node name="Margin" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="MapMode" type="HBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 260
+alignment = 1
+
+[node name="MapFocusModeLabel" type="Label" parent="Margin/MapMode"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_s86y4")
+theme_override_font_sizes/font_size = 24
+text = "Map Focus: "
+script = ExtResource("2_636u5")
+
+[node name="MapOverlayModeLabel" type="Label" parent="Margin/MapMode"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_s86y4")
+theme_override_font_sizes/font_size = 24
+text = "Map Overlay:"
+script = ExtResource("3_akgwn")
+
+[node name="DebugToggleLabel" type="Label" parent="Margin/MapMode"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("1_s86y4")
+theme_override_font_sizes/font_size = 24
+text = "Debug:"
+script = ExtResource("4_w8wei")
+
+[node name="TeamADetails" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/separation = 5
+
+[node name="TeamALabel" type="Label" parent="Margin/TeamADetails"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.160784, 0.356863, 1, 1)
+theme_override_fonts/font = ExtResource("1_s86y4")
+theme_override_font_sizes/font_size = 32
+text = "TEAM A"
+
+[node name="TeamAUnitsLabel" type="Label" parent="Margin/TeamADetails"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.160784, 0.356863, 1, 1)
+theme_override_fonts/font = ExtResource("1_s86y4")
+theme_override_font_sizes/font_size = 27
+text = "Units: "
+script = ExtResource("4_b83rk")
+
+[node name="TeamACampsLabel" type="Label" parent="Margin/TeamADetails"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.160784, 0.356863, 1, 1)
+theme_override_fonts/font = ExtResource("1_s86y4")
+theme_override_font_sizes/font_size = 27
+text = "Camps: "
+script = ExtResource("5_7tgkj")
+
+[node name="TealBDetails" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="TeamBLabel" type="Label" parent="Margin/TealBDetails"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_s86y4")
+theme_override_font_sizes/font_size = 32
+text = "TEAM B"
+
+[node name="TeamBUnitsLabel" type="Label" parent="Margin/TealBDetails"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_s86y4")
+theme_override_font_sizes/font_size = 27
+text = "Units: "
+script = ExtResource("5_oqha6")
+
+[node name="TeamBCampsLabel" type="Label" parent="Margin/TealBDetails"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_s86y4")
+theme_override_font_sizes/font_size = 27
+text = "Camps:"
+script = ExtResource("7_jevvu")

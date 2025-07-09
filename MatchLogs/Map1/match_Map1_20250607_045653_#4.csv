@@ -1,0 +1,57 @@
+Match #4,,,,,,,,
+Map: Map1,,,,,,,,
+Start Time: 7/06/2025 4:56:53 AM,,,,,,,,
+---,,,,,,,,
+Team A using BDI,,,,,,,,
+Team B using BehaviorTree,,,,,,,,
+---,,,,,,,,
+Match ended after 300.0 seconds,,,,,,,,
+Winner: TeamA - Time limit reached. Better resources.,,,,,,,,
+,,,,,,,,
+--- Final Match Metrics ---,,,,,,,,
+Winner: TeamA,,,,,,,,
+Match Duration: 300.0 seconds,,,,,,,,
+Team A Final Unit Count: 14,,,,,,,,
+Team B Final Unit Count: 13,,,,,,,,
+Team A Final Health %: 98.3,,,,,,,,
+Team B Final Health %: 99.4,,,,,,,,
+Team A Camp Count: 7,,,,,,,,
+Team B Camp Count: 5,,,,,,,,
+Team A Combat Encounters: 119,,,,,,,,
+Team B Combat Encounters: 74,,,,,,,,
+Team A Scouted Cells: 4864 cells,,,,,,,,
+Team B Scouted Cells: 7564 cells,,,,,,,,
+Team A Avg Reaction Time: 0.22 seconds,,,,,,,,
+Team B Avg Reaction Time: 0.44 seconds,,,,,,,,
+,,,,,,,,
+--- Time Series Data ---,,,,,,,,
+Time,TeamA_Units,TeamB_Units,TeamA_Health%,TeamB_Health%,TeamA_CombatEncounters,TeamB_CombatEncounters,TeamA_AvgReactionTime,TeamB_AvgReactionTime
+10,15,15,100,100,0,0,N/A,N/A
+20,15,15,100,100,0,0,N/A,N/A
+30,15,15,100,100,0,0,N/A,N/A
+40,15,15,100,100,8,1,N/A,N/A
+50,15,15,100,100,8,1,N/A,N/A
+60,15,15,100,100,15,2,N/A,N/A
+70,15,15,100,100,17,15,N/A,N/A
+80.1,15,15,100,100,18,30,N/A,N/A
+90.1,15,15,100,100,30,30,N/A,N/A
+100.1,15,15,100,100,30,30,N/A,N/A
+110.1,15,15,100,100,45,30,N/A,N/A
+120.1,15,15,100,100,77,30,N/A,N/A
+130.1,15,15,100,100,78,30,N/A,N/A
+140.2,15,15,100,95.1,78,32,N/A,0.13
+150.3,15,15,100,93.3,79,34,N/A,0.27
+160.3,15,15,96.4,93.8,85,40,0.39,0.37
+170.4,15,15,93.5,95.2,90,42,0.36,0.45
+180.4,14,14,96.5,99.4,91,43,0.36,0.38
+190.4,14,14,96.5,99.4,91,43,0.36,0.38
+200.4,14,14,94.9,99.4,91,51,0.36,0.44
+210.4,14,14,94.4,99.4,91,55,0.36,0.57
+220.4,14,14,94.8,99.4,91,62,0.36,0.42
+230.4,14,14,95.1,99.4,91,67,0.36,0.35
+240.5,14,14,90.6,99.4,102,74,1.2,0.44
+250.5,14,14,94.4,99.4,102,74,1.2,0.44
+260.5,14,14,96.3,97.5,109,74,0.45,0.44
+270.6,14,14,98.3,95.3,116,74,0.22,0.44
+280.6,14,13,98.3,99.4,118,74,0.22,0.44
+290.6,14,13,98.3,99.4,118,74,0.22,0.44

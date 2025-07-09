@@ -1,0 +1,11 @@
+.import/
+.export/
+export.cfg
+export_presets.cfg
+
+*.godot/
+.godot/
+.idea/
+.cache/
+.godot/settings/
+

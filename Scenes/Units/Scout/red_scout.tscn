@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://8mx28hy0kuig"]
+
+[ext_resource type="PackedScene" uid="uid://t2j7pf8w27s4" path="res://Scenes/Units/Scout/blue_scout.tscn" id="1_jrhai"]
+[ext_resource type="Texture2D" uid="uid://07k57il06nvm" path="res://Assets/Units/Scout/RedScout.png" id="2_rgwo1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jrhai"]
+resource_local_to_scene = true
+radius = 400.0
+
+[node name="RedScout" instance=ExtResource("1_jrhai")]
+
+[node name="UnitSprite" parent="." index="0"]
+texture = ExtResource("2_rgwo1")
+
+[node name="VisionCircleCollision" parent="VisionCircle" index="0"]
+shape = SubResource("CircleShape2D_jrhai")

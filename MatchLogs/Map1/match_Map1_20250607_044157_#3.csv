@@ -1,0 +1,57 @@
+Match #3,,,,,,,,
+Map: Map1,,,,,,,,
+Start Time: 7/06/2025 4:41:57 AM,,,,,,,,
+---,,,,,,,,
+Team A using BDI,,,,,,,,
+Team B using BehaviorTree,,,,,,,,
+---,,,,,,,,
+Match ended after 300.0 seconds,,,,,,,,
+Winner: TeamA - Time limit reached. Better resources.,,,,,,,,
+,,,,,,,,
+--- Final Match Metrics ---,,,,,,,,
+Winner: TeamA,,,,,,,,
+Match Duration: 300.0 seconds,,,,,,,,
+Team A Final Unit Count: 14,,,,,,,,
+Team B Final Unit Count: 2,,,,,,,,
+Team A Final Health %: 94.3,,,,,,,,
+Team B Final Health %: 100.0,,,,,,,,
+Team A Camp Count: 7,,,,,,,,
+Team B Camp Count: 2,,,,,,,,
+Team A Combat Encounters: 156,,,,,,,,
+Team B Combat Encounters: 57,,,,,,,,
+Team A Scouted Cells: 4282 cells,,,,,,,,
+Team B Scouted Cells: 3378 cells,,,,,,,,
+Team A Avg Reaction Time: 0.18 seconds,,,,,,,,
+Team B Avg Reaction Time: 0.17 seconds,,,,,,,,
+,,,,,,,,
+--- Time Series Data ---,,,,,,,,
+Time,TeamA_Units,TeamB_Units,TeamA_Health%,TeamB_Health%,TeamA_CombatEncounters,TeamB_CombatEncounters,TeamA_AvgReactionTime,TeamB_AvgReactionTime
+10,15,15,100,100,0,0,N/A,N/A
+20.1,15,15,100,100,0,1,N/A,N/A
+30.1,15,15,100,100,0,9,N/A,N/A
+40.1,15,15,100,100,0,9,N/A,N/A
+50.1,15,15,100,100,0,9,N/A,N/A
+60.1,15,15,100,100,0,9,N/A,N/A
+70.1,15,15,100,100,1,9,N/A,N/A
+80.2,15,15,100,100,3,9,N/A,N/A
+90.3,15,15,100,100,4,9,N/A,N/A
+100.3,15,15,100,100,6,15,0.79,0.32
+110.4,15,15,100,100,31,22,0.85,0.4
+120.4,15,15,100,100,53,36,0.85,0.4
+130.5,15,15,98.2,100,78,43,0.24,0.4
+140.5,15,15,97.6,100,79,47,0.22,0.37
+150.5,15,15,96.4,93.1,93,52,0.23,0.23
+160.6,14,14,93.1,92.3,102,53,0.26,0.2
+170.6,14,13,95.7,95.2,111,53,0.43,0.2
+180.6,14,12,97.4,100,118,53,0.31,0.2
+190.6,14,12,99.3,100,118,53,0.31,0.2
+200.6,14,12,100,100,118,53,0.31,0.2
+210.7,14,12,100,100,128,53,0.3,0.2
+220.7,14,11,100,96.8,133,53,0.34,0.2
+230.7,14,10,100,100,138,53,0.26,0.2
+240.7,14,9,100,85.1,139,53,0.26,0.2
+250.7,14,5,91,90,145,55,0.2,0.2
+260.8,14,2,89.8,100,156,57,0.18,0.17
+270.8,14,2,91.4,100,156,57,0.18,0.17
+280.8,14,2,93.4,100,156,57,0.18,0.17
+290.8,14,2,94,100,156,57,0.18,0.17

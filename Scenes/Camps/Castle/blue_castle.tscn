@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyh43f3kkn0hl"]
+
+[ext_resource type="PackedScene" uid="uid://cpxlkq3xkkfj1" path="res://Scenes/Camps/camp_base.tscn" id="1_8brvm"]
+[ext_resource type="Script" uid="uid://dlhs318fa1mga" path="res://Scripts/Camps/Castle.cs" id="2_p2ojx"]
+[ext_resource type="Texture2D" uid="uid://c1covaca0xkul" path="res://Assets/Castles/Blue Castle.png" id="3_p2ojx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvgc8"]
+resource_local_to_scene = true
+size = Vector2(127.5, 116)
+
+[node name="BlueCastle" instance=ExtResource("1_8brvm")]
+script = ExtResource("2_p2ojx")
+
+[node name="SpriteBase" parent="." index="0"]
+scale = Vector2(2, 2)
+texture = ExtResource("3_p2ojx")
+
+[node name="CollisionShapeBase" parent="." index="1"]
+position = Vector2(0.25, 6)
+shape = SubResource("RectangleShape2D_lvgc8")

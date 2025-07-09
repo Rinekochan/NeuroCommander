@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpxlkq3xkkfj1"]
+
+[ext_resource type="Texture2D" uid="uid://djjfhk85k5tnf" path="res://Assets/Camps/Blue Camp 1.png" id="1_ovbo6"]
+[ext_resource type="Script" uid="uid://sysy44teih6f" path="res://Scripts/Camps/CampBase.cs" id="1_vjx5l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vjx5l"]
+resource_local_to_scene = true
+size = Vector2(32, 36)
+
+[node name="CampBase" type="StaticBody2D"]
+scale = Vector2(0.5, 0.5)
+collision_layer = 4
+collision_mask = 10
+script = ExtResource("1_vjx5l")
+
+[node name="SpriteBase" type="Sprite2D" parent="."]
+texture = ExtResource("1_ovbo6")
+
+[node name="CollisionShapeBase" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_vjx5l")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://i2i705rrtgsv"]
+
+[ext_resource type="Script" uid="uid://bosl80rhe2wwh" path="res://Scripts/World.cs" id="1_35xla"]
+[ext_resource type="PackedScene" uid="uid://bhlmt4pjwxjrm" path="res://Scenes/Maps/Map01.tscn" id="1_ys1qc"]
+[ext_resource type="Script" uid="uid://po73v5halj62" path="res://Scripts/Utils/Camera.cs" id="2_35xla"]
+[ext_resource type="Script" uid="uid://b77x7v8opqp7u" path="res://Scripts/Test/AgentTestController.cs" id="3_i3aeo"]
+[ext_resource type="PackedScene" uid="uid://qxpryletcd0f" path="res://Scenes/Units/SiegeMachine/blue_siege_machine.tscn" id="4_5wyu1"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_35xla")
+
+[node name="Map" parent="." instance=ExtResource("1_ys1qc")]
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(358, 498)
+script = ExtResource("2_35xla")
+
+[node name="AgentControllerTest3" type="Node2D" parent="."]
+position = Vector2(204, 368)
+script = ExtResource("3_i3aeo")
+
+[node name="BlueSiegeMachine" parent="AgentControllerTest3" instance=ExtResource("4_5wyu1")]
+position = Vector2(-223, 95)
+TeamId = 1

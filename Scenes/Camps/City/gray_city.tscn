@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqblk22c68r8l"]
+
+[ext_resource type="PackedScene" uid="uid://cer7hhb67eicn" path="res://Scenes/Camps/City/blue_city.tscn" id="1_56vtr"]
+[ext_resource type="Texture2D" uid="uid://3dgmdnapt7dp" path="res://Assets/Cities/Gray City.png" id="2_st7vm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7k0b"]
+resource_local_to_scene = true
+size = Vector2(86, 59)
+
+[node name="GrayCity1" instance=ExtResource("1_56vtr")]
+
+[node name="SpriteBase" parent="." index="0"]
+texture = ExtResource("2_st7vm")
+
+[node name="CollisionShapeBase" parent="." index="1"]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_u7k0b")

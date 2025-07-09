@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://5ehjo3c6s2t3"]
+
+[ext_resource type="Script" uid="uid://d4n1rkivb77j8" path="res://Scripts/Units/Projectiles/RifleBullet.cs" id="1_exkko"]
+[ext_resource type="PackedScene" uid="uid://difmq5sy6socu" path="res://Scenes/Projectiles/projectile_base.tscn" id="1_wlxgd"]
+[ext_resource type="PackedScene" uid="uid://cb4nio0k01s8t" path="res://Scenes/Projectiles/rifle_effect.tscn" id="3_86emv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_exkko"]
+resource_local_to_scene = true
+radius = 5.0
+height = 14.0
+
+[node name="RifleBullet" instance=ExtResource("1_wlxgd")]
+script = ExtResource("1_exkko")
+HitEffectScene = ExtResource("3_86emv")
+Speed = 50.0
+Damage = 2.0
+MaxRange = 250.0
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CapsuleShape2D_exkko")

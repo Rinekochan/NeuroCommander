@@ -1,0 +1,58 @@
+Match #6,,,,,,,,
+Map: Map2,,,,,,,,
+Start Time: 7/06/2025 10:21:50 PM,,,,,,,,
+---,,,,,,,,
+Team A using BDI,,,,,,,,
+Team B using BehaviorTree,,,,,,,,
+---,,,,,,,,
+Match ended after 300.0 seconds,,,,,,,,
+Winner: TeamB - TeamA has no commanders left.,,,,,,,,
+,,,,,,,,
+--- Final Match Metrics ---,,,,,,,,
+Winner: TeamB.,,,,,,,,
+Match Duration: 300.0 seconds,,,,,,,,
+Team A Final Unit Count: 7,,,,,,,,
+Team B Final Unit Count: 6,,,,,,,,
+Team A Final Health %: 73.0,,,,,,,,
+Team B Final Health %: 100.0,,,,,,,,
+Team A Camp Count: 1,,,,,,,,
+Team B Camp Count: 4,,,,,,,,
+Team A Combat Encounters: 37,,,,,,,,
+Team B Combat Encounters: 87,,,,,,,,
+Team A Scouted Cells: 6797 cells,,,,,,,,
+Team B Scouted Cells: 3005 cells,,,,,,,,
+Team A Avg Reaction Time: 0.28 seconds,,,,,,,,
+Team B Avg Reaction Time: 0.19 seconds,,,,,,,,
+,,,,,,,,
+--- Time Series Data ---,,,,,,,,
+Time,TeamA_Units,TeamB_Units,TeamA_Health%,TeamB_Health%,TeamA_CombatEncounters,TeamB_CombatEncounters,TeamA_AvgReactionTime,TeamB_AvgReactionTime
+10.1,15,15,100,100,0,4,N/A,N/A
+20.2,15,15,100,100,0,4,N/A,N/A
+30.2,15,15,100,100,0,4,N/A,N/A
+40.3,15,15,100,100,0,4,N/A,N/A
+50.4,15,15,100,100,0,8,N/A,N/A
+60.4,15,15,100,100,0,10,N/A,N/A
+70.4,15,15,100,100,0,10,N/A,N/A
+80.5,15,15,100,100,0,10,N/A,N/A
+90.5,15,15,100,100,6,10,N/A,N/A
+100.5,15,15,100,100,20,10,N/A,N/A
+110.5,15,15,100,100,20,10,N/A,N/A
+120.6,15,15,100,100,20,10,N/A,N/A
+130.6,15,15,100,100,20,10,N/A,N/A
+140.6,15,15,100,100,20,12,N/A,N/A
+150.7,15,15,100,100,20,22,N/A,N/A
+160.8,14,15,95.6,100,20,32,N/A,0.75
+170.8,13,15,75.7,96.9,27,39,0.2,0.26
+180.9,12,15,78.5,87.8,30,48,0.21,0.19
+190.9,10,15,84.7,81.9,35,60,0.23,0.17
+200.9,8,12,84.6,89,36,72,0.23,0.17
+210.9,7,9,88.3,92.8,37,83,0.28,0.19
+220.9,7,6,73.7,100,39,86,0.28,0.19
+231,7,6,73,100,47,87,0.28,0.19
+241,7,6,73,100,48,87,0.23,0.19
+251,7,6,73,100,52,87,0.23,0.19
+261,7,6,73,100,53,87,0.28,0.19
+271,7,6,73,100,57,87,0.28,0.19
+281,7,6,73,100,58,87,0.28,0.19
+291.1,7,6,73,100,62,87,0.28,0.19
+301.1,7,6,73,100,63,87,0.28,0.19

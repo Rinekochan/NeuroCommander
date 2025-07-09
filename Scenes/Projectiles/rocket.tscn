@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://cts036rn1nba1"]
+
+[ext_resource type="PackedScene" uid="uid://difmq5sy6socu" path="res://Scenes/Projectiles/projectile_base.tscn" id="1_iah1m"]
+[ext_resource type="Texture2D" uid="uid://co28k6mfhdboc" path="res://Assets/Units/Bullet/Rocket.png" id="1_pdoir"]
+[ext_resource type="Script" uid="uid://bw7w2vahsan3" path="res://Scripts/Units/Projectiles/Rocket.cs" id="2_mnbpj"]
+[ext_resource type="PackedScene" uid="uid://cpr163oiqpkbj" path="res://Scenes/Projectiles/explosion_effect.tscn" id="3_l5w55"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mnbpj"]
+resource_local_to_scene = true
+radius = 4.0
+height = 18.0
+
+[node name="Rocket" instance=ExtResource("1_iah1m")]
+script = ExtResource("2_mnbpj")
+ExplosionRadius = 100.0
+ExplosionDamage = 50.0
+ExplosionEffectScene = ExtResource("3_l5w55")
+FuseTime = 0.1
+Speed = 30.0
+Damage = 10.0
+MaxRange = 300.0
+
+[node name="Bullet" parent="." index="0"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_pdoir")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CapsuleShape2D_mnbpj")

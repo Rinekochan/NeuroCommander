@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdat2ltdi6u0u"]
+
+[ext_resource type="Texture2D" uid="uid://hgkswlf308qp" path="res://Assets/Obstacles/Rocks/BrownRock1.png" id="1_hliyy"]
+
+[node name="BrownRock" type="StaticBody2D" groups=["obstacles"]]
+collision_layer = 4
+collision_mask = 10
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-15, -16, 9, -19, 23, -3, 8, 20, -8, 19, -23, 5)
+
+[node name="BrownRock" type="Sprite2D" parent="."]
+texture = ExtResource("1_hliyy")

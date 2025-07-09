@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://e62d76bcbukg"]
+
+[ext_resource type="PackedScene" uid="uid://tsnpx3jotexq" path="res://Scenes/Units/Sniper/blue_sniper.tscn" id="1_jg7o3"]
+[ext_resource type="Texture2D" uid="uid://djr8wfva686k7" path="res://Assets/Units/Sniper/RedSniper.png" id="2_nx6be"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s64ok"]
+resource_local_to_scene = true
+radius = 200.0
+
+[node name="RedSniper" instance=ExtResource("1_jg7o3")]
+
+[node name="UnitSprite" parent="." index="0"]
+texture = ExtResource("2_nx6be")
+
+[node name="FOVConeCollision" parent="FOVCone" index="0"]
+position = Vector2(0, 4)
+
+[node name="VisionCircleCollision" parent="VisionCircle" index="0"]
+position = Vector2(-5, 14)
+shape = SubResource("CircleShape2D_s64ok")
+
+[node name="Marker" parent="." index="8"]
+position = Vector2(20, -48)

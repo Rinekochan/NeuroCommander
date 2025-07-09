@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmif11r7qobdo"]
+
+[ext_resource type="Texture2D" uid="uid://dliue7u1dmsfc" path="res://Assets/Units/Bullet/SniperBullet.png" id="1_bd6v3"]
+[ext_resource type="PackedScene" uid="uid://difmq5sy6socu" path="res://Scenes/Projectiles/projectile_base.tscn" id="1_knp6u"]
+[ext_resource type="Script" uid="uid://7h045q1l2elx" path="res://Scripts/Units/Projectiles/SniperBullet.cs" id="2_0xvhc"]
+[ext_resource type="PackedScene" uid="uid://cq3ojkjhqwl1f" path="res://Scenes/Projectiles/sniper_effect.tscn" id="3_bvkor"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0xvhc"]
+resource_local_to_scene = true
+radius = 4.0
+height = 14.0
+
+[node name="SniperBullet" instance=ExtResource("1_knp6u")]
+script = ExtResource("2_0xvhc")
+HitEffectScene = ExtResource("3_bvkor")
+PenetrationCount = 2
+Speed = 100.0
+Damage = 20.0
+MaxRange = 500.0
+
+[node name="Bullet" parent="." index="0"]
+texture = ExtResource("1_bd6v3")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -20)
+shape = SubResource("CapsuleShape2D_0xvhc")

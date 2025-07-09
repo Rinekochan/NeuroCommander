@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://tsnpx3jotexq"]
+
+[ext_resource type="PackedScene" uid="uid://dqdqooabxonv6" path="res://Scenes/Units/shootable_unit_base.tscn" id="1_hlg3k"]
+[ext_resource type="Texture2D" uid="uid://cp0dlrawxiy08" path="res://Assets/Units/Sniper/BlueSniper.png" id="2_riss5"]
+[ext_resource type="PackedScene" uid="uid://bmif11r7qobdo" path="res://Scenes/Projectiles/sniper_bullet.tscn" id="3_riss5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hubvl"]
+resource_local_to_scene = true
+radius = 200.0
+
+[node name="BlueSniper" groups=["snipers"] instance=ExtResource("1_hlg3k")]
+WeaponPath = NodePath("Weapon")
+MaxHealth = 80.0
+CurrentHealth = 80.0
+
+[node name="UnitSprite" parent="." index="0"]
+texture = ExtResource("2_riss5")
+
+[node name="UnitCollisionShape" parent="." index="1"]
+position = Vector2(-7, 21)
+polygon = PackedVector2Array(-29, -21, -15, -21, 14, -21, 29, -59, 48, -13, 37, 11, 24, 20, -26, 20, -39, 14, -42, -2)
+
+[node name="FOVConeCollision" parent="FOVCone" index="0"]
+polygon = PackedVector2Array(-19, 14, -240, -428, -160, -464, -40, -488, 0, -492, 68, -484, 116, -476, 172, -456, 240, -424, 7, 14)
+
+[node name="VisionCircleCollision" parent="VisionCircle" index="0"]
+position = Vector2(-7, 10)
+shape = SubResource("CircleShape2D_hubvl")
+
+[node name="Steering" parent="." index="4"]
+UnitPath = NodePath("..")
+MaxSpeed = 65.0
+
+[node name="Weapon" parent="." index="7"]
+ProjectilePrefab = ExtResource("3_riss5")
+MaxAmmo = 5
+CurrentAmmo = 5
+ReloadTime = 5.0
+FireRate = 4.0
+WeaponRange = 700.0
+ProjectileSpeed = 500.0
+ProjectileSize = 1.0
+Damage = 30.0
+Accuracy = 0.95
+ProjectilesPerShot = 1
+ProjectileSpread = 0.0
+
+[node name="Marker" parent="." index="8"]
+position = Vector2(22, -49)

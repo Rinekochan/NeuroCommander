@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://qxpryletcd0f"]
+
+[ext_resource type="PackedScene" uid="uid://dqdqooabxonv6" path="res://Scenes/Units/shootable_unit_base.tscn" id="1_2udef"]
+[ext_resource type="Texture2D" uid="uid://bhb36g8c3n62h" path="res://Assets/Units/Siege Machine/BlueSiegeMachine.png" id="2_d18ge"]
+[ext_resource type="PackedScene" uid="uid://cts036rn1nba1" path="res://Scenes/Projectiles/rocket.tscn" id="3_d18ge"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rpbl7"]
+resource_local_to_scene = true
+radius = 200.0
+
+[node name="BlueSiegeMachine" groups=["siege_machines"] instance=ExtResource("1_2udef")]
+WeaponPath = NodePath("Weapon")
+
+[node name="UnitSprite" parent="." index="0"]
+texture = ExtResource("2_d18ge")
+
+[node name="UnitCollisionShape" parent="." index="1"]
+polygon = PackedVector2Array(-24, -17, -15, -46, 14, -46, 22, -19, 44, -8, 42, 15, 25, 27, -25, 27, -43, 15, -44, -9)
+
+[node name="FOVConeCollision" parent="FOVCone" index="0"]
+polygon = PackedVector2Array(-9, -7, -128, -376, -80, -392, -24, -400, 32, -400, 92, -392, 148, -368, 8, -7)
+
+[node name="VisionCircleCollision" parent="VisionCircle" index="0"]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_rpbl7")
+
+[node name="Steering" parent="." index="4"]
+UnitPath = NodePath("..")
+MaxSpeed = 50.0
+
+[node name="Weapon" parent="." index="7"]
+scale = Vector2(0.3, 0.3)
+ProjectilePrefab = ExtResource("3_d18ge")
+MaxAmmo = 3
+CurrentAmmo = 3
+ReloadTime = 10.0
+FireRate = 10.0
+WeaponRange = 700.0
+ProjectileSpeed = 400.0
+ProjectileSize = 1.0
+Damage = 40.0
+Accuracy = 0.95
+ProjectilesPerShot = 1
+ProjectileSpread = 0.0
+
+[node name="Marker" parent="." index="8"]
+position = Vector2(0, -45)

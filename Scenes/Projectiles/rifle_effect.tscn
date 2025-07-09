@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb4nio0k01s8t"]
+
+[ext_resource type="Texture2D" uid="uid://dctmp6m3f7f37" path="res://Assets/Units/Bullet/RiffleEffect.png" id="1_xl8um"]
+
+[sub_resource type="Animation" id="Animation_xr042"]
+resource_name = "Hit"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RiffleEffect:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_q6h10"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RiffleEffect:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4mj2m"]
+_data = {
+&"Hit": SubResource("Animation_xr042"),
+&"RESET": SubResource("Animation_q6h10")
+}
+
+[node name="RifleEffect" type="Node2D"]
+
+[node name="RiffleEffect" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_xl8um")
+hframes = 6
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4mj2m")
+}
