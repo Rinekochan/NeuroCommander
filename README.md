@@ -36,10 +36,6 @@ Includes multiple unit classes like **Rifleman**, **Sniper**, **Tanker**, **Scou
 * `MatchLogs/`: Match results and statistics
 * `Assets/`: Sprites and fonts (open-source, non-commercial)
 
-## Demonstration
-
-A full demo video is available showcasing comparative behaviour between BT and BDI on symmetric and asymmetric maps. See the documentation for match highlights and observed tactical differences.
-
 ## Acknowledgements
 
 Uses freely licensed art assets from OpenGameArt contributors:
